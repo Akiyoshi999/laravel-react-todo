@@ -82,4 +82,42 @@ class TaskTest extends TestCase
         $response = $this->getJson("api/tasks");
         $response->assertJsonCount($task->count() - 1);
     }
+
+    /**
+     * @test
+     */
+    public function emptyTest()
+    {
+        $data = [
+            'title' => '',
+        ];
+        $response = $this->postJson('api/tasks', $data);
+
+        // dd($response->json());
+
+        $response
+            ->assertStatus(422)
+            ->assertJsonValidationErrors([
+                'title' => 'The title field is required.'
+            ]);
+    }
+
+    /**
+     * @test
+     */
+    public function title255overTest()
+    {
+        $data = [
+            'title' => str_repeat('T', 256),
+        ];
+        $response = $this->postJson('api/tasks', $data);
+
+        // dd($response->json());
+
+        $response
+            ->assertStatus(422)
+            ->assertJsonValidationErrors([
+                'title' => 'The title must not be greater than 255 characters.'
+            ]);
+    }
 }

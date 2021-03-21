@@ -11,6 +11,7 @@
 
 -   Model の追加
     php artisan make:model -a Task
+    php artisan make:request TaskRequest
 
 -   マイグレーション
     php artisan migrate
