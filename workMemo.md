@@ -17,3 +17,11 @@ php artisan migrate
 
 シーダの実行
 php artisan db:seed
+
+laravel 起動
+php artisan serve
+
+IDE ヘルパー
+php artisan ide-helper:generate
+
+php artisan ide-helper:models "App\Models\Task ["
