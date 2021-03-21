@@ -30,3 +30,9 @@ php artisan ide-helper:models "App\Models\Task"
 -   テストファイルの作成
     php artisan make:test TaskTest
     ./vendor/bin/phpunit tests/Feature/TaskTest.php
+
+-   node モジュールインストール
+    npm install
+
+-   React のインストール
+    npm i -D react react-dom @types/react @types/react-dom
