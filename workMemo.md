@@ -36,3 +36,6 @@ php artisan ide-helper:models "App\Models\Task"
 
 -   React のインストール
     npm i -D react react-dom @types/react @types/react-dom
+
+-   TypeScript 設定ファイルの書き出し
+    tsc --init --jsx react
