@@ -185,7 +185,9 @@ Object.defineProperty(exports, "__esModule", ({
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var HelpPage = function HelpPage() {
-  return react_1["default"].createElement("h2", null, "Help Page");
+  return react_1["default"].createElement("div", {
+    className: "align-center"
+  }, react_1["default"].createElement("h1", null, "\u30D8\u30EB\u30D7"), react_1["default"].createElement("p", null, "\u4F7F\u3044\u65B9\u3092\u89E3\u8AAC\u3057\u307E\u3059", react_1["default"].createElement("br", null), "\u3053\u306E\u30B5\u30A4\u30C8\u306F\u30ED\u30B0\u30A4\u30F3\u304C\u5FC5\u8981\u3067\u3059"));
 };
 
 exports.default = HelpPage;
@@ -214,7 +216,28 @@ Object.defineProperty(exports, "__esModule", ({
 var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
 var LoginPage = function LoginPage() {
-  return react_1["default"].createElement("h2", null, "Login Page");
+  return react_1["default"].createElement(react_1["default"].Fragment, null, react_1["default"].createElement("div", {
+    className: "login-page"
+  }, react_1["default"].createElement("div", {
+    className: "login-panel"
+  }, react_1["default"].createElement("form", null, react_1["default"].createElement("div", {
+    className: "input-group"
+  }, react_1["default"].createElement("label", null, "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9"), react_1["default"].createElement("input", {
+    type: "email",
+    className: "input"
+  })), react_1["default"].createElement("div", {
+    className: "input-group"
+  }, react_1["default"].createElement("label", null, "\u30D1\u30B9\u30EF\u30FC\u30C9"), react_1["default"].createElement("input", {
+    type: "password",
+    className: "input"
+  })), react_1["default"].createElement("button", {
+    type: "submit",
+    className: "btn"
+  }, "\u30ED\u30B0\u30A4\u30F3"))), react_1["default"].createElement("div", {
+    className: "links"
+  }, react_1["default"].createElement("a", {
+    href: "#"
+  }, "\u30D8\u30EB\u30D7"))));
 };
 
 exports.default = LoginPage;
@@ -344,13 +367,7 @@ function App() {
     to: "/help"
   }, "\u30D8\u30EB\u30D7")), react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
     to: "/login"
-  }, "\u30ED\u30B0\u30A4\u30F3")), react_1["default"].createElement("li", null, react_1["default"].createElement("span", null, "\u30ED\u30B0\u30A2\u30A6\u30C8")))), react_1["default"].createElement("nav", null, react_1["default"].createElement("ul", null, react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/"
-  }, "\u30DB\u30FC\u30E0")), react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/help"
-  }, "\u30D8\u30EB\u30D7")), react_1["default"].createElement("li", null, react_1["default"].createElement(react_router_dom_1.Link, {
-    to: "/login"
-  }, "\u30ED\u30B0\u30A4\u30F3")))), react_1["default"].createElement(react_router_dom_1.Switch, null, react_1["default"].createElement(react_router_dom_1.Route, {
+  }, "\u30ED\u30B0\u30A4\u30F3")), react_1["default"].createElement("li", null, react_1["default"].createElement("span", null, "\u30ED\u30B0\u30A2\u30A6\u30C8")))), react_1["default"].createElement(react_router_dom_1.Switch, null, react_1["default"].createElement(react_router_dom_1.Route, {
     path: "/help"
   }, react_1["default"].createElement(index_1["default"], null)), react_1["default"].createElement(react_router_dom_1.Route, {
     path: "/login"
